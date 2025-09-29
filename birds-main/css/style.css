@@ -59,11 +59,29 @@ tr:hover {
 
 table {
     border-spacing: 0px;
-    border-right: 2px black solid;
-    margin: auto;
+    margin: 0 auto;
 }
 
-table:first-child {
-    border-radius: 20px;
+td, th {
+    border-bottom: 2px solid black;  
+    border-right: 2px solid black;   
+    padding: 10px;
 }
 
+thead th:first-child {
+    border-top-left-radius: 20px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 20px;
+}
+
+tbody tr:last-child th:first-child,
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+tbody tr:last-child th:last-child,
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
